@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\App\View;
+
 class HomeController
 {
     public function index()
@@ -10,8 +12,9 @@ class HomeController
             'title' => "Belajar PHP MVC",
             'content' => 'Selamat Belajar PHP MVC'
         ];
-
-        echo "HomeController.index";
+        View::render('Home/index', $model);
+        // require __DIR__ . "/../View/Home/index.php";
+        // echo "HomeController.index";
     }
 
     public function hello()
